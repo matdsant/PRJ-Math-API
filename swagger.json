@@ -1,0 +1,223 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Math API v2",
+    "description": "API for Mathematical Calculations",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/convert_days/{days}": {
+      "get": {
+        "summary": "Convert days into years, months, and days",
+        "parameters": [
+          {
+            "name": "days",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Conversion result",
+            "content": {
+              "application/json": {
+                "example": {
+                  "ano": 1,
+                  "mes": 2,
+                  "dia": 20
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request error"
+          }
+        }
+      }
+    },
+    "/api/potencia/{num1}/{num2}": {
+      "get": {
+        "summary": "Calculate power of numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "num2",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation result",
+            "content": {
+              "application/json": {
+                "example": {
+                  "O resultado do cálculo de potência é: ": 64
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/raiz_quadrada/{num}": {
+      "get": {
+        "summary": "Calculate square root of a number",
+        "parameters": [
+          {
+            "name": "num",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation result",
+            "content": {
+              "application/json": {
+                "example": {
+                  "O resultado do cálculo de Raiz Quadrada é: ": 4
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request error"
+          }
+        }
+      }
+    },
+    "/api/calcular_salario/{funcionario}/{hora}/{salario}": {
+      "get": {
+        "summary": "Calculate employee salary",
+        "parameters": [
+          {
+            "name": "funcionario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "hora",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "salario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation result",
+            "content": {
+              "application/json": {
+                "example": {
+                  "Funcionario: ": 1,
+                  "Salario : ": "U$ 20.00"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/primo/{number}": {
+      "get": {
+        "summary": "Check if a number is prime",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Check result",
+            "content": {
+              "application/json": {
+                "example": {
+                  "O número é primo": 7
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/bhaskara/{a}/{b}/{c}": {
+      "get": {
+        "summary": "Calculate Bhaskara's formula",
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "b",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "c",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Calculation result",
+            "content": {
+              "application/json": {
+                "example": {
+                  "X1": 2,
+                  "X2": -3
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
